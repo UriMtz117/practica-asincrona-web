@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Catálogo Asíncrono</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Tech<span>Store</span></h1>
+            <p>Explora nuestra colección de productos premium</p>
+        </header>
+
+        <section class="controls">
+            <div class="search-box">
+                <input type="text" id="buscador" placeholder="Buscar producto...">
+            </div>
+            
+            <div class="filter-box">
+                <select id="filtroCategoria">
+                    <option value="todos">Todas las categorías</option>
+                    <option value="Tecnología">Tecnología</option>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Audio">Audio</option>
+                </select>
+                <button id="btnCargar">Actualizar Catálogo</button>
+            </div>
+        </section>
+
+        <div id="mensaje" class="status-msg"></div>
+        
+        <!-- Skeleton Loader (Para que se vea profesional mientras carga) -->
+        <div id="loader" class="grid hidden">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+
+        <main id="listaProductos" class="grid">
+            <!-- Los productos se inyectan aquí -->
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
