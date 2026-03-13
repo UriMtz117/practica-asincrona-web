@@ -7,8 +7,8 @@ const filtro = document.getElementById("filtroCategoria");
 
 let productosData = []; // Cache de datos
 
-// Cargar al iniciar la página
-window.addEventListener("DOMContentLoaded", cargarProductos);
+// --- CAMBIO AQUÍ: Eliminamos la carga automática ---
+// Solo se cargará cuando el usuario presione el botón
 btnCargar.addEventListener("click", cargarProductos);
 
 async function cargarProductos() {
@@ -51,7 +51,6 @@ function renderizar(datos) {
     });
 }
 
-// Lógica combinada de búsqueda y filtro
 function filtrar() {
     const texto = buscador.value.toLowerCase();
     const cat = filtro.value;

@@ -7,9 +7,9 @@ var loader = document.getElementById("loader");
 var buscador = document.getElementById("buscador");
 var filtro = document.getElementById("filtroCategoria");
 var productosData = []; // Cache de datos
-// Cargar al iniciar la página
+// --- CAMBIO AQUÍ: Eliminamos la carga automática ---
+// Solo se cargará cuando el usuario presione el botón
 
-window.addEventListener("DOMContentLoaded", cargarProductos);
 btnCargar.addEventListener("click", cargarProductos);
 
 function cargarProductos() {
@@ -70,8 +70,7 @@ function renderizar(datos) {
     tarjeta.innerHTML = "\n            <span class=\"icon\">".concat(p.imagen, "</span>\n            <span class=\"categoria\">").concat(p.categoria, "</span>\n            <h3>").concat(p.nombre, "</h3>\n            <span class=\"precio\">$").concat(p.precio.toLocaleString(), "</span>\n        ");
     lista.appendChild(tarjeta);
   });
-} // Lógica combinada de búsqueda y filtro
-
+}
 
 function filtrar() {
   var texto = buscador.value.toLowerCase();
